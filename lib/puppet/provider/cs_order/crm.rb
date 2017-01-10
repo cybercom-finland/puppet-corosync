@@ -2,7 +2,7 @@ begin
   require 'puppet_x/voxpupuli/corosync/provider/crmsh'
 rescue LoadError
   require 'pathname' # WORKAROUND #14073, #7788 and SERVER-973
-  corosync_path = File.dirname(FILE)
+  corosync_path = File.dirname(__FILE__)
   require File.join corosync_path, '../../../puppet_x/voxpupuli/corosync/provider/crmsh'
 end
 
